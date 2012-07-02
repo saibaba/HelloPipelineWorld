@@ -1,0 +1,35 @@
+Description:
+------------
+
+Here is a simple configuration for leanring BRM pipeline concepts.
+It is a simple Hello World configuration.
+
+This is what the pipeline does:
+1) Takes input file (HELLO_*.cdr format) from the data/in  folder (the file contains list of users separated by newline with each user detials in the format "name;salutation")
+2) Creates a new output file in data/out/hello (HELLO_*.out format) folder with a greeting
+3) It uses just two framework modules: Input Generic Stream (to read the CDR) and Output Generic Stream (to generate the output)
+
+Install
+-------
+
+1) Extract the contents of hello.tar.tz in the $IFW_HOME folder
+2) cd hello
+
+In the hello folder you see all the configuration necessary to compute the greeting
+
+Run
+---
+
+While in the hello folder:
+1) Run the pipeline in the background with this command:
+   ../bin/ifw -r hello.reg &
+2) create an input file with the following command:
+   echo "Saibaba;Mr" > data/in/HELLO_1.cdr
+3) wait few seconds
+4) Run below command to see the output:
+   cat data/out/hello/HELLO_1.out
+
+You can also see the log folder for details; Use the regular semaphore to control the pipeline.
+
+-sai
+
