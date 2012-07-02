@@ -12,10 +12,11 @@ This is what the pipeline does:
 Install
 -------
 
-1) Extract the contents of hello.tar.tz in the $IFW_HOME folder
+1) Extract the contents of hello.tar.tz inside the $IFW_HOME folder
 2) cd hello
 
-In the hello folder you see all the configuration necessary to compute the greeting
+In the hello folder you see all the configuration necessary to compute the greeting! Most important one is hello.reg.
+This configuration does not depend on any external configurations (like global containerDesc file) - all it requires is locally in the hello folder.
 
 Run
 ---
@@ -29,7 +30,7 @@ While in the hello folder:
 4) Run below command to see the output:
    cat data/out/hello/HELLO_1.out
 
-You can also see the log folder for details; Use the regular semaphore to control the pipeline.
+You can also see the log folder for details; Use the semaphore to control the pipeline.
 
 -sai
 
